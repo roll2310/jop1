@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-white">
+
+<section class="py-16">
+        <div class="text-center mb-10">
+            <h1 class="text-5xl font-bold mb-4">Cost-effectively<br>build any software</h1>
+
+            <!-- Toggle switch -->
+            <div class="inline-flex items-center bg-blue-900 rounded-full p-1 mt-4">
+                <button class="tab-btn active-tab" id="monthlyBtn">Monthly</button>
+                <button class="tab-btn" id="annuallyBtn">Annually</button>
+            </div>
+        </div>
+
+        <!-- Pricing cards -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+
+            <!-- Beginner -->
+            <div class="pricing-card">
+                <h3 class="text-xl font-semibold">Beginner</h3>
+                <p class="text-gray-600 mb-6">Up to 10 members</p>
+                <p class="price-text" id="price1">$25<span class="text-lg text-gray-700"> /Per month</span></p>
+                <p class="text-gray-600 mt-4 mb-8">
+                    This is an excellent option for people & small businesses who are starting out.
+                </p>
+                <a href="pricing-plans.html" class="choose-btn text-center block">Choose the plan</a>
+            </div>
+
+            <!-- Starter -->
+            <div class="pricing-card">
+                <h3 class="text-xl font-semibold">Starter</h3>
+                <p class="text-gray-600 mb-6">Up to 50 members</p>
+                <p class="price-text" id="price2">$89<span class="text-lg text-gray-700"> /Per month</span></p>
+                <p class="text-gray-600 mt-4 mb-8">
+                    This plan is suitable for e-commerce stores as well as professional blogs.
+                </p>
+                <a href="pricing-plans.html" class="choose-btn text-center block">Choose the plan</a>
+            </div>
+
+            <!-- Pro -->
+            <div class="pricing-card">
+                <h3 class="text-xl font-semibold">Pro</h3>
+                <p class="text-gray-600 mb-6">Up to 100 members</p>
+                <p class="price-text" id="price3">$199<span class="text-lg text-gray-700"> /Per month</span></p>
+                <p class="text-gray-600 mt-4 mb-8">
+                    Ideal for handling complicated projects, enterprise-level projects, and websites.
+                </p>
+                <a href="pricing-plans.html" class="choose-btn text-center block">Choose the plan</a>
+            </div>
+
+        </div>
+</section>
+
+<!-- Toggle JS -->
+<script>
+    const monthlyBtn = document.getElementById("monthlyBtn");
+    const annuallyBtn = document.getElementById("annuallyBtn");
+
+    const price1 = document.getElementById("price1");
+    const price2 = document.getElementById("price2");
+    const price3 = document.getElementById("price3");
+
+    monthlyBtn.addEventListener("click", () => {
+        monthlyBtn.classList.add("active-tab");
+        annuallyBtn.classList.remove("active-tab");
+
+        price1.innerHTML = "$25<span class='text-lg text-gray-700'> /Per month</span>";
+        price2.innerHTML = "$89<span class='text-lg text-gray-700'> /Per month</span>";
+        price3.innerHTML = "$199<span class='text-lg text-gray-700'> /Per month</span>";
+    });
+
+    annuallyBtn.addEventListener("click", () => {
+        annuallyBtn.classList.add("active-tab");
+        monthlyBtn.classList.remove("active-tab");
+
+        price1.innerHTML = "$250<span class='text-lg text-gray-700'> /Per year</span>";
+        price2.innerHTML = "$890<span class='text-lg text-gray-700'> /Per year</span>";
+        price3.innerHTML = "$1990<span class='text-lg text-gray-700'> /Per year</span>";
+    });
+</script>
+
+</body>
+</html>

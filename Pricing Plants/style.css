@@ -1,0 +1,61 @@
+.tab-btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.active-tab {
+    background-color: black;
+    color: white;
+}
+
+/* ============================
+   Pricing Card Styles
+   ============================ */
+.pricing-card {
+    background-color: #f7f3ef;
+    padding: 32px;
+    border-radius: 16px;
+    text-align: left;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+/* Hover effect mạnh & đổi màu chữ */
+.pricing-card:hover {
+    background-color: #d4c8be;
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    color: #111;
+}
+
+.pricing-card:hover h3,
+.pricing-card:hover p,
+.pricing-card:hover .price-text {
+    color: #000;
+}
+
+/* Price text */
+.price-text {
+    font-size: 48px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* Choose button */
+.choose-btn {
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.choose-btn:hover {
+    background-color: black;
+    color: white;
+}

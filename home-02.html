@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title >Azzle - AI SaaS</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Flowbite -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+
+  <!-- Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  <script> new WOW().init(); </script>
+</head>
+
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="w-full py-5 px-10 flex justify-between items-center fixed top-0 left-0 z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+  
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <h1 class="text-2xl font-bold tracking-wide flex items-center gap-2">
+        <a href="index.html"><i class="fa-solid fa-snowflake text-blue-400"></i></a>
+        Azzle
+    </h1>
+</div>
+
+  <!-- Menu -->
+  <div class="flex items-center gap-8 text-lg font-semibold text-gray-900">
+
+    <!-- HOME DROPDOWN -->
+    <div class="relative group">
+        <button class="transition flex items-center gap-1 hover:text-purple-600">
+            Demo
+            <i class="fa-solid fa-chevron-down text-xs mt-1"></i>
+        </button>
+
+        <div class="absolute left-0 top-8 w-48 bg-white rounded-xl shadow-xl
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-300 origin-top scale-95 group-hover:scale-100">
+
+            <a href="home-01.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 01</a>
+            <a href="home-02.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 02</a>
+            <a href="home-03.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 03</a>
+            <a href="home-04.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 04</a>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <a href="about.html" class="hover:text-purple-600 transition">
+        About
+    </a>
+
+    <!-- SERVICES DROPDOWN -->
+    <div class="relative group">
+        <button class="transition flex items-center gap-1 hover:text-purple-600">
+            Services
+            <i class="fa-solid fa-chevron-down text-xs mt-1"></i>
+        </button>
+
+        <div class="absolute left-0 top-8 w-48 bg-white rounded-xl shadow-xl
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-300 origin-top scale-95 group-hover:scale-100">
+
+            <a href="service-01.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Service 01</a>
+            <a href="service-detail.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Service Detail</a>
+        </div>
+    </div>
+
+    <!-- PAGES DROPDOWN -->
+    <div class="relative group">
+        <button class="transition flex items-center gap-1 hover:text-black font-medium">
+            Pages
+            <i class="fa-solid fa-chevron-down text-xs mt-1"></i>
+        </button>
+
+        <div class="absolute left-0 top-8 w-64 bg-white rounded-xl shadow-xl
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-300 origin-top scale-95 group-hover:scale-100">
+
+            <div class="absolute -top-2 left-6 w-4 h-4 bg-white rotate-45 shadow-md"></div>
+
+            <ul class="py-2">
+
+                <!-- PORTFOLIOS -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Portfolios</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="portfolios.html" class="block px-5 py-3 hover:bg-gray-100">Portfolios</a>
+                        <a href="portfolio-details.html" class="block px-5 py-3 hover:bg-gray-100">Portfolio Details</a>
+                    </div>
+                </li>
+
+                <!-- TEAMS -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Teams</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="teams.html" class="block px-5 py-3 hover:bg-gray-100">Teams</a>
+                        <a href="team-details.html" class="block px-5 py-3 hover:bg-gray-100">Team Details</a>
+                    </div>
+                </li>
+
+                <!-- FAQ -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>FAQ</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="faq.html" class="block px-5 py-3 hover:bg-gray-100">FAQ - 1</a>
+                        <a href="faq-2.html" class="block px-5 py-3 hover:bg-gray-100">FAQ - 2</a>
+                    </div>
+                </li>
+
+                <!-- Portfolio -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Portfolio</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="portfolio.html" class="block px-5 py-3 hover:bg-gray-100">Portfolio</a>
+                        <a href="portfolio-details.html" class="block px-5 py-3 hover:bg-gray-100">Portfolio Details</a>
+                    </div>
+                </li>
+
+                <!-- Pricing -->
+                <li>
+                    <a href="pricing.html"
+                       class="block px-5 py-3 hover:bg-gray-100 hover:text-red-500">
+                        Pricing
+                    </a>
+                </li>
+
+                <!-- Utilities -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Utilities</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="404.html" class="block px-5 py-3 hover:bg-gray-100">Error 404</a>
+                        <a href="login.html" class="block px-5 py-3 hover:bg-gray-100">Login</a>
+                        <a href="signup.html" class="block px-5 py-3 hover:bg-gray-100">Signup</a>
+                        <a href="reset-password.html" class="block px-5 py-3 hover:bg-gray-100">Reset Password</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+  <!-- Buttons -->
+  <div class="flex items-center gap-4">
+      <button class="px-5 py-2 rounded-xl font-medium border border-white hover:bg-white hover:text-black transition shadow-md">
+          Login
+      </button>
+
+      <button class="px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-400 transition shadow-md">
+          Sign Up Free
+      </button>
+  </div>
+
+</nav>
+
+
+
+  <!---------------------------------------------------BODY--------------------------->
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="grid md:grid-cols-2 gap-10 items-center w-full px-8 md:px-20">
+
+        <!-- LEFT CONTENT -->
+        <div class="space-y-8 fade-in">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                Enhance your <br>
+                communication <br>
+                skills with <span class="text-purple-400">AI</span>
+            </h1>
+
+            <p class="text-lg text-gray-300 max-w-xl leading-relaxed">
+                Meet your customers on the most popular messaging channels with an AI chatbot. 
+                It understands the customer experience. Our AI chatbot benefits users by providing 
+                instant support, 24/7 availability, and efficient response to queries.
+            </p>
+
+            <a href="#"
+               class="px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-400 transition shadow-md">
+                Start Chatting for Free
+                <i class="fa-solid fa-arrow-right text-white"></i>
+            </a>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="flex justify-center float-anim">
+            <img src="img/hero-img-2.png" class="w-[380px] md:w-[480px] drop-shadow-2xl" alt="AI Robot">
+        </div>
+    </div>
+</section>
+<!--------------------------------------THUONG HIEU----------------------------------------->
+  <section class="text-center pt-20 fade-in">
+        <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Remarkable features in effective conversation</h1>
+
+        <section class="features-section container mx-auto py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- ITEM 1 -->
+        <div class="flex items-start gap-4 feature-box">
+            <div class="icon-wrap">
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709496.png" class="w-8">
+            </div>
+
+            <div>
+                <h3 class="feature-title">Multilingual Support</h3>
+                <p class="feature-text">
+                    Our AI chatbots are capable for the communicating in multilingual
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="flex items-start gap-4 feature-box">
+            <div class="icon-wrap">
+                <img src="https://cdn-icons-png.flaticon.com/512/1827/1827504.png" class="w-8">
+            </div>
+
+            <div>
+                <h3 class="feature-title">Intent Recognition</h3>
+                <p class="feature-text">
+                    It can determine what the user is trying to respond accordingly
+                </p>
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="flex items-start gap-4 feature-box">
+            <div class="icon-wrap">
+                <img src="https://cdn-icons-png.flaticon.com/512/1827/1827501.png" class="w-8">
+            </div>
+
+            <div>
+                <h3 class="feature-title">Context Management</h3>
+                <p class="feature-text">
+                    AI allows chatbots to refer back to earlier messages, answer follow-up
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+        </div>
+    </section>
+
+    <!-- BLOCK 1 -->
+    <!-- SECTION 2 (REVERSED) -->
+     <section class="expression-section container mx-auto py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+        <!-- LEFT IMAGE -->
+        <div class="phone-wrap">
+            <img src="your-image.png" alt="AI Chat App" class="phone-img">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div>
+            <h2 class="expression-title">
+                Expression of like <br> human attitude
+            </h2>
+
+            <p class="expression-desc">
+                Our AI chatbots excel at understanding natural language and generating 
+                human-like responses. Adapting your conversational style to our chatbot 
+                can improve the quality of your interactions.
+            </p>
+
+            <ul class="expression-list">
+                <li>Use natural language as you were talking</li>
+                <li>The conversation with a polite greeting</li>
+                <li>Feel free to use emotions and expressions</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<section class="faster-section container mx-auto py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+        <!-- LEFT CONTENT -->
+        <div>
+            <h2 class="faster-title">
+                Faster means of <br> communication
+            </h2>
+
+            <p class="faster-desc">
+                This AI chatbot can handle repetitive tasks and also quickly answer 
+                frequently asked questions, businesses to save time and resources.
+            </p>
+
+            <ul class="faster-list">
+                <li>Provide instant responses any queries</li>
+                <li>Engage in multiple conversations at once</li>
+                <li>Manage all frequently asked questions</li>
+            </ul>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="phone-wrapper">
+            <div class="phone-bg"></div>
+            <img src="your-phone-image.png" alt="AI Chat App" class="phone-img">
+        </div>
+
+    </div>
+</section>
+<section class="best-section container mx-auto py-28">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+        <!-- LEFT PHONE -->
+        <div class="best-phone-wrapper">
+            <div class="best-phone-bg"></div>
+            <img src="your-phone-image.png" alt="AI Chat Screen" class="best-phone-img">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="best-content">
+            <h2 class="best-title">
+                Always provide <br> the best answer
+            </h2>
+
+            <p class="best-desc">
+                AI chatbots are designed to give accurate & relevant answers 
+                to the best of their abilities based on the information they 
+                are trained and algorithms to ensure high-quality responses.
+            </p>
+
+            <p class="best-desc">
+                Our chatbot responses is influenced by the quality and 
+                well-trained chatbots are more likely to provide better answers.
+            </p>
+
+            <a href="#" class="best-btn">
+                Try It Now →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+  
+
+
+
+
+
+
+<!---------------------------FOOTER------------------------------------->
+<section class="marquee-section">
+    <div class="marquee">
+        <span>
+            Start building software ✦ Start building software ✦ 
+            Start building software ✦ Start building software ✦ 
+        </span>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="footer-about">
+            <h3>✶ Azzle</h3>
+            <p>
+                Our mission is to harness the power of AI to solve complex business challenges & 
+                decision-makers with data-driven insights, and enhance user experiences across digital platforms.
+            </p>
+
+            <p class="footer-website">Website: <a href="#">www.example.com</a></p>
+        </div>
+
+        <!-- PRIMARY PAGES -->
+        <div class="footer-col">
+            <h4>Primary Pages</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- UTILITY PAGES -->
+        <div class="footer-col">
+            <h4>Utility Pages</h4>
+            <ul>
+                <li><a href="#">Signup</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">404 Not Found</a></li>
+                <li><a href="#">Password Reset</a></li>
+            </ul>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-col newsletter">
+            <h4>Subscribe To Our Newsletter</h4>
+            <div class="newsletter-box">
+                <input type="email" placeholder="Enter your email" />
+                <button class="newsletter-btn">→</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © Copyright 2023, All Rights Reserved by Mthemeus
+    </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+
+
+</html>

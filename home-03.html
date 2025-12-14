@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title >Azzle - AI SaaS</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Flowbite -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+
+  <!-- Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  <script> new WOW().init(); </script>
+</head>
+
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="w-full py-5 px-10 flex justify-between items-center fixed top-0 left-0 z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+  
+  <!-- Logo -->
+  <div class="flex items-center gap-3">
+    <h1 class="text-2xl font-bold tracking-wide flex items-center gap-2">
+        <i class="fa-solid fa-snowflake text-blue-400"></i>
+        Azzle
+    </h1>
+</div>
+
+  <!-- Menu -->
+  <div class="flex items-center gap-8 text-lg font-semibold text-gray-900">
+
+    <!-- HOME DROPDOWN -->
+    <div class="relative group">
+        <button class="transition flex items-center gap-1 hover:text-purple-600">
+            Demo
+            <i class="fa-solid fa-chevron-down text-xs mt-1"></i>
+        </button>
+
+        <div class="absolute left-0 top-8 w-48 bg-white rounded-xl shadow-xl
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-300 origin-top scale-95 group-hover:scale-100">
+
+            <a href="home-01.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 01</a>
+            <a href="home-02.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 02</a>
+            <a href="home-03.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 03</a>
+            <a href="home-04.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Home 04</a>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <a href="about.html" class="hover:text-purple-600 transition">
+        About
+    </a>
+
+    <!-- SERVICES DROPDOWN -->
+    <div class="relative group">
+        <button class="transition flex items-center gap-1 hover:text-purple-600">
+            Services
+            <i class="fa-solid fa-chevron-down text-xs mt-1"></i>
+        </button>
+
+        <div class="absolute left-0 top-8 w-48 bg-white rounded-xl shadow-xl
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-300 origin-top scale-95 group-hover:scale-100">
+
+            <a href="service-01.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Service 01</a>
+            <a href="service-detail.html" class="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-purple-600">Service Detail</a>
+        </div>
+    </div>
+
+    <!-- PAGES DROPDOWN -->
+    <div class="relative group">
+        <button class="transition flex items-center gap-1 hover:text-black font-medium">
+            Pages
+            <i class="fa-solid fa-chevron-down text-xs mt-1"></i>
+        </button>
+
+        <div class="absolute left-0 top-8 w-64 bg-white rounded-xl shadow-xl
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-300 origin-top scale-95 group-hover:scale-100">
+
+            <div class="absolute -top-2 left-6 w-4 h-4 bg-white rotate-45 shadow-md"></div>
+
+            <ul class="py-2">
+
+                <!-- PORTFOLIOS -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Portfolios</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="portfolios.html" class="block px-5 py-3 hover:bg-gray-100">Portfolios</a>
+                        <a href="portfolio-details.html" class="block px-5 py-3 hover:bg-gray-100">Portfolio Details</a>
+                    </div>
+                </li>
+
+                <!-- TEAMS -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Teams</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="teams.html" class="block px-5 py-3 hover:bg-gray-100">Teams</a>
+                        <a href="team-details.html" class="block px-5 py-3 hover:bg-gray-100">Team Details</a>
+                    </div>
+                </li>
+
+                <!-- FAQ -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>FAQ</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="faq.html" class="block px-5 py-3 hover:bg-gray-100">FAQ - 1</a>
+                        <a href="faq-2.html" class="block px-5 py-3 hover:bg-gray-100">FAQ - 2</a>
+                    </div>
+                </li>
+
+                <!-- Portfolio -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Portfolio</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="portfolio.html" class="block px-5 py-3 hover:bg-gray-100">Portfolio</a>
+                        <a href="portfolio-details.html" class="block px-5 py-3 hover:bg-gray-100">Portfolio Details</a>
+                    </div>
+                </li>
+
+                <!-- Pricing -->
+                <li>
+                    <a href="pricing.html"
+                       class="block px-5 py-3 hover:bg-gray-100 hover:text-red-500">
+                        Pricing
+                    </a>
+                </li>
+
+                <!-- Utilities -->
+                <li class="relative group/sub">
+                    <a class="flex items-center justify-between px-5 py-3 hover:bg-gray-100 cursor-pointer hover:text-red-500">
+                        <span>Utilities</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-full top-0 ml-2 w-48 bg-white rounded-xl shadow-xl
+                                opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible
+                                transition-all duration-300 origin-left scale-95 group-hover/sub:scale-100">
+
+                        <a href="404.html" class="block px-5 py-3 hover:bg-gray-100">Error 404</a>
+                        <a href="login.html" class="block px-5 py-3 hover:bg-gray-100">Login</a>
+                        <a href="signup.html" class="block px-5 py-3 hover:bg-gray-100">Signup</a>
+                        <a href="reset-password.html" class="block px-5 py-3 hover:bg-gray-100">Reset Password</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+  <!-- Buttons -->
+  <div class="flex items-center gap-4">
+      <button class="px-5 py-2 rounded-xl font-medium border border-white hover:bg-white hover:text-black transition shadow-md">
+          Login
+      </button>
+
+      <button class="px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-400 transition shadow-md">
+          Sign Up Free
+      </button>
+  </div>
+
+</nav>
+
+
+
+  <!---------------------------------------------------BODY--------------------------->
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-10 pt-32">
+    <h1 class="wow fadeInUp text-5xl font-extrabold mb-6 leading-tight">
+      Simplify your SaaS <br /> solution with AI
+    </h1>
+    <p class="wow fadeInUp text-white-300 text-lg max-w-[600px] leading-relaxed mb-10" data-wow-delay="0.2s">
+      Our AI SAAS tool is a cloud-based software delivery model. It helps businesses forecast demand for products and
+      services and optimize inventory management and supply chain operations.
+    </p>
+
+
+    <div class="btn-container wow fadeInUp" data-wow-delay="0.9s">
+      <button class="btn-primary">Bắt đầu ngay</button>
+      <button class="btn-primary">Bắt đầu ngay</button>
+    </div>
+  </section>
+<!--------------------------------------THUONG HIEU----------------------------------------->
+  <section class="hero-section">
+    <img src="img/hero-dashboard.jpg" alt="auto">
+  </section>
+  <div class="black-divider mx-auto"></div>
+
+<p class="text text-center max-w-3xl mx-auto mt-6 ">
+    Companies of all sizes trust us to find AI SaaS critical to their growth and innovation
+</p>
+  <section class="brands-slider">
+    <div class="slider-track">
+      <img src="img/brand-1.png" alt="Brand 1" class="brand-logo">
+      <img src="img/brand-2.png" alt="Brand 2" class="brand-logo">
+      <img src="img/brand-3.png" alt="Brand 3" class="brand-logo">
+      <img src="img/brand-4.png" alt="Brand 4" class="brand-logo">
+      <img src="img/brand-5.png" alt="Brand 5" class="brand-logo">
+      <img src="img/brand-1.png" alt="Brand 6" class="brand-logo">
+      <img src="img/brand-2.png" alt="Brand 7" class="brand-logo">
+      <!-- Nhân bản để trượt liên tục -->
+      <img src="img/brand-1.png" alt="Brand 1" class="brand-logo">
+      <img src="img/brand-2.png" alt="Brand 2" class="brand-logo">
+      <img src="img/brand-3.png" alt="Brand 3" class="brand-logo">
+      <img src="img/brand-4.png" alt="Brand 4" class="brand-logo">
+      <img src="img/brand-5.png" alt="Brand 5" class="brand-logo">
+      <img src="img/brand-1.png" alt="Brand 6" class="brand-logo">
+      <img src="img/brand-2.png" alt="Brand 7" class="brand-logo">
+    </div>
+  </section>
+
+  <!-----------------------------------4 BOX------------------------------->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h1 class="text-5xl font-extrabold leading-tight mb-12">
+      Core features that<br>make it valuable
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 border rounded-xl overflow-hidden">
+
+      <!-- Card 1 -->
+      <div class="p-8 border md:border-r card">
+        <div class="mb-6 text-4xl">✦</div>
+        <h3 class="text-xl font-semibold mb-3">Resource Flexibility</h3>
+        <p class="text-gray-600 mb-6">
+          This is an excellent option for people & small businesses who are starting out.
+        </p>
+        <a href="#" class="text-2xl">→</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="p-8 border md:border-r card">
+        <div class="mb-6 text-4xl">✸</div>
+        <h3 class="text-xl font-semibold mb-3">Managed Services</h3>
+        <p class="text-gray-600 mb-6">
+          This is an excellent option for people & small businesses who are starting out.
+        </p>
+        <a href="#" class="text-2xl">→</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="p-8 border md:border-r card">
+        <div class="mb-6 text-4xl">◆◆</div>
+        <h3 class="text-xl font-semibold mb-3">Web-Based Access</h3>
+        <p class="text-gray-600 mb-6">
+          This is an excellent option for people & small businesses who are starting out.
+        </p>
+        <a href="#" class="text-2xl">→</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="p-8 border card">
+        <div class="mb-6 text-4xl">✧</div>
+        <h3 class="text-xl font-semibold mb-3">Resource Flexibility</h3>
+        <p class="text-gray-600 mb-6">
+          This is an excellent option for people & small businesses who are starting out.
+        </p>
+        <a href="#" class="text-2xl">→</a>
+      </div>
+
+    </div>
+  </section>
+
+<!----------------------------------Accessible to a wider audience---------------------------------->
+  <section class="w-full py-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+        <!-- IMAGE -->
+        <div>
+            <img src="img/content-image-1.jpg" 
+                 class="rounded-2xl shadow-xl w-full max-w-[450px] mx-auto" />
+        </div>
+
+        <!-- TEXT -->
+        <div>
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+                Accessible to a wider audience
+            </h2>
+
+            <p class="text-gray-600 mb-4">
+                Advanced AI capabilities accessible to a broader audience,
+                including small & medium-sized businesses and individuals
+                who may not have the resources or expertise to develop.
+            </p>
+
+            <p class="text-gray-600">
+                Advanced AI capabilities accessible to a broader audience,
+                including small & medium-sized businesses and individuals
+                who may not have the resources or expertise to develop.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SECTION 2 (REVERSED) -->
+<section class="w-full py-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+        <!-- TEXT -->
+        <div>
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+                Providing quick deploy solutions
+            </h2>
+
+            <p class="text-gray-600 mb-4">
+                Our AI SaaS solutions can be quickly deployed, enabling users to start benefiting
+                from AI capabilities without lengthy setup and development times in fast-paced industries.
+            </p>
+
+            <!-- CHECKLIST -->
+            <ul class="space-y-3">
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-black text-xl"></i>
+                    <span class="font-semibold">Ready-to-use AI capabilities system</span>
+                </li>
+
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-black text-xl"></i>
+                    <span class="font-semibold">Users can quickly integrate AI features</span>
+                </li>
+
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-black text-xl"></i>
+                    <span class="font-semibold">Time savings translate to cost savings</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- IMAGE -->
+        <div>
+            <img src="img/content-image-2.jpg" 
+                 class="rounded-2xl shadow-xl w-full max-w-[450px] mx-auto" />
+        </div>
+
+    </div>
+</section>
+
+ <div class="max-w-6xl mx-auto mt-10 p-8 bg-black text-white rounded-3xl card-shadow grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- Image with Play button -->
+        <div class="relative rounded-xl overflow-hidden">
+            <img 
+                src="img/funfact-image.jpg" 
+                alt="Dashboard" 
+                class="w-full h-full object-cover"
+            >
+
+            <!-- Play button (gắn link tại đây) -->
+            <a href="https://www.youtube.com/watch?v=bipkz4di41c&list=RDbipkz4di41c&start_radio=1" target="_blank" class="play-btn">
+                <div class="play-circle shadow-lg">
+                    <!-- Icon -->
+                    <svg class="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M6 4l12 6-12 6V4z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <!-- Content -->
+        <div class="flex flex-col justify-center">
+            <h1 class="text-4xl font-extrabold leading-snug">
+                AI-powered that <br> streamline tasks
+            </h1>
+
+            <p class="text-gray-300 mt-4">
+                As your business grows or your AI SaaS needs change, you can easily 
+                adjust your subscription level to match those needs. This flexibility 
+                ensures that AI remains an asset.
+            </p>
+
+            <!-- Count-up section -->
+            <div class="flex items-center gap-10 mt-10">
+
+                <div>
+                    <p id="count1" class="text-5xl font-bold text-orange-500">0%</p>
+                    <p class="text-gray-300 text-sm">Customer service inquiries</p>
+                </div>
+
+                <div>
+                    <p id="count2" class="text-5xl font-bold text-orange-500">0%</p>
+                    <p class="text-gray-300 text-sm">Using financial institutions</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Count-up Script -->
+    <script>
+    function startCount(el, target, duration = 2000) {
+        let start = 0;
+        const stepTime = Math.max(Math.floor(duration / target), 10); 
+
+        const timer = setInterval(() => {
+            start++;
+            el.textContent = start + "%";
+            if (start >= target) clearInterval(timer);
+        }, stepTime);
+    }
+
+    // Trigger khi phần tử xuất hiện trên màn hình
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+
+                // Lấy số từ data-target
+                startCount(el, parseInt(el.dataset.target));
+
+                // Ngừng quan sát sau khi chạy 1 lần
+                obs.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Gán data-target và thêm vào observer
+    document.getElementById("count1").dataset.target = "92";
+    document.getElementById("count2").dataset.target = "75";
+
+    observer.observe(document.getElementById("count1"));
+    observer.observe(document.getElementById("count2"));
+</script>
+
+
+
+<!---------------------------Cost-effectively build any software--------------------------------->
+<section class="py-16">
+        <div class="text-center mb-10">
+            <h1 class="text-5xl font-bold mb-4">Cost-effectively<br>build any software</h1>
+
+            <!-- Toggle switch -->
+            <div class="inline-flex items-center bg-blue-900 rounded-full p-1 mt-4">
+                <button class="tab-btn active-tab" id="monthlyBtn">Monthly</button>
+                <button class="tab-btn" id="annuallyBtn">Annually</button>
+            </div>
+        </div>
+
+        <!-- Pricing cards -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+
+            <!-- Beginner -->
+            <div class="pricing-card">
+                <h3 class="text-xl font-semibold">Beginner</h3>
+                <p class="text-gray-600 mb-6">Up to 10 members</p>
+                <p class="price-text" id="price1">$25<span class="text-lg text-gray-700"> /Per month</span></p>
+                <p class="text-gray-600 mt-4 mb-8">
+                    This is an excellent option for people & small businesses who are starting out.
+                </p>
+                <a href="Pricing Plants/index.html" class="choose-btn text-center block">Choose the plan</a>
+            </div>
+
+            <!-- Starter -->
+            <div class="pricing-card">
+                <h3 class="text-xl font-semibold">Starter</h3>
+                <p class="text-gray-600 mb-6">Up to 50 members</p>
+                <p class="price-text" id="price2">$89<span class="text-lg text-gray-700"> /Per month</span></p>
+                <p class="text-gray-600 mt-4 mb-8">
+                    This plan is suitable for e-commerce stores as well as professional Portfolios.
+                </p>
+                <a href="Pricing Plants/index.html" class="choose-btn text-center block">Choose the plan</a>
+            </div>
+
+            <!-- Pro -->
+            <div class="pricing-card">
+                <h3 class="text-xl font-semibold">Pro</h3>
+                <p class="text-gray-600 mb-6">Up to 100 members</p>
+                <p class="price-text" id="price3">$199<span class="text-lg text-gray-700"> /Per month</span></p>
+                <p class="text-gray-600 mt-4 mb-8">
+                    Ideal for handling complicated projects, enterprise-level projects, and websites.
+                </p>
+                <a href="Pricing Plants/index.html" class="choose-btn text-center block">Choose the plan</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
+
+    <!-- Toggle JS -->
+    <script>
+        const monthlyBtn = document.getElementById("monthlyBtn");
+        const annuallyBtn = document.getElementById("annuallyBtn");
+
+        const price1 = document.getElementById("price1");
+        const price2 = document.getElementById("price2");
+        const price3 = document.getElementById("price3");
+
+        monthlyBtn.addEventListener("click", () => {
+            monthlyBtn.classList.add("active-tab");
+            annuallyBtn.classList.remove("active-tab");
+
+            price1.innerHTML = "$25<span class='text-lg text-gray-700'> /Per month</span>";
+            price2.innerHTML = "$89<span class='text-lg text-gray-700'> /Per month</span>";
+            price3.innerHTML = "$199<span class='text-lg text-gray-700'> /Per month</span>";
+        });
+
+        annuallyBtn.addEventListener("click", () => {
+            annuallyBtn.classList.add("active-tab");
+            monthlyBtn.classList.remove("active-tab");
+
+            price1.innerHTML = "$250<span class='text-lg text-gray-700'> /Per year</span>";
+            price2.innerHTML = "$890<span class='text-lg text-gray-700'> /Per year</span>";
+            price3.innerHTML = "$1990<span class='text-lg text-gray-700'> /Per year</span>";
+        });
+    </script>
+
+<!------------------------Freely ask us for more information------------------------------>
+
+<section class="py-20">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
+
+        <!-- Left -->
+        <div>
+            <h1 class="text-5xl font-bold leading-tight">
+                Freely ask us for <br> more information
+            </h1>
+
+            <p class="text-gray-600 mt-6 mb-10">
+                Our AI SaaS solutions can be quickly deployed, enabling users to start benefiting 
+                from AI capabilities without lengthy setup and development times.
+            </p>
+
+            <a href="#" class="faq-btn">Ask you questions</a>
+        </div>
+
+        <!-- Right FAQ -->
+        <div class="space-y-4">
+
+            <div class="faq-item">
+                <button class="faq-header">
+                    <span>How do I start AI SaaS?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    To start using our AI SaaS, simply create an account on our website and follow the setup instructions.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header">
+                    <span>Can I customize AI SaaS solutions?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    Yes, we offer customization options to tailor the AI features to your business needs.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header open">
+                    <span>How can AI benefit my business?</span>
+                    <span class="faq-icon">×</span>
+                </button>
+                <div class="faq-content open">
+                    AI helps automate tasks, improve decision-making, reduce costs, and enhance customer experiences.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/faq.js"></script>
+
+</section>
+
+<!------------------------Positive feedback from our users------------------------------>
+<section class="bg-black py-24 text-white">
+    <div class="text-center mb-16">
+        <h1 class="text-5xl font-bold leading-tight">
+            Positive feedback <br> from our users
+        </h1>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+
+        <!-- Card 1 -->
+        <div class="bg-[#0d0d0d] border border-[#222] p-8 rounded-xl hover:border-[#444] transition">
+            <p class="text-red-500 text-xl mb-4">★★★★★</p>
+            <p class="mb-6">“This AI SaaS tool has revolutionized the way we process and analyze data. This is a game-changer for our business.”</p>
+
+            <div class="flex items-center gap-4">
+                <img src="img/testimonial-img-1.jpg" class="w-12 h-12 rounded-full">
+                <div>
+                    <p class="font-semibold">Max Weber</p>
+                    <span class="text-gray-400 text-sm">HR Manager</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#0d0d0d] border border-[#222] p-8 rounded-xl hover:border-[#444] transition">
+            <p class="text-red-500 text-xl mb-4">★★★★★</p>
+            <p class="mb-6">“It answers immediately, and we've seen a significant reduction in response time. Our customers love it and so do we!”</p>
+
+            <div class="flex items-center gap-4">
+                <img src="img/testimonial-img-2.jpg" class="w-12 h-12 rounded-full">
+                <div>
+                    <p class="font-semibold">Douglas Smith</p>
+                    <span class="text-gray-400 text-sm">Businessman</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#0d0d0d] border border-[#222] p-8 rounded-xl hover:border-[#444] transition">
+            <p class="text-red-500 text-xl mb-4">★★★★★</p>
+            <p class="mb-6">“It is accurate, fast and supports multiple languages support. It is a must for any international business success.”</p>
+
+            <div class="flex items-center gap-4">
+                <img src="img/testimonial-img-3.jpg" class="w-12 h-12 rounded-full">
+                <div>
+                    <p class="font-semibold">Abraham Maslo</p>
+                    <span class="text-gray-400 text-sm">Founder @ Marketing Company</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#0d0d0d] border border-[#222] p-8 rounded-xl hover:border-[#444] transition">
+            <p class="text-red-500 text-xl mb-4">★★★★★</p>
+            <p class="mb-6">“Security is a top concern for us, and AI SaaS takes it seriously. It's a reassuring layer of protection for our organization.”</p>
+
+            <div class="flex items-center gap-4">
+                <img src="img/testimonial-img-4.jpg" class="w-12 h-12 rounded-full">
+                <div>
+                    <p class="font-semibold">Jack Fayol</p>
+                    <span class="text-gray-400 text-sm">HR Manager</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[#0d0d0d] border border-[#222] p-8 rounded-xl hover:border-[#444] transition">
+            <p class="text-red-500 text-xl mb-4">★★★★★</p>
+            <p class="mb-6">“We were concerned about integrating their APIs were well documented, and their support team was super cool.”</p>
+
+            <div class="flex items-center gap-4">
+                <img src="img/testimonial-img-5.jpg" class="w-12 h-12 rounded-full">
+                <div>
+                    <p class="font-semibold">Karen Lynn</p>
+                    <span class="text-gray-400 text-sm">Software Engineer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-[#0d0d0d] border border-[#222] p-8 rounded-xl hover:border-[#444] transition">
+            <p class="text-red-500 text-xl mb-4">★★★★★</p>
+            <p class="mb-6">“The return on investment has exceeded our expectations. It’s an investment in the future of our business.”</p>
+
+            <div class="flex items-center gap-4">
+                <img src="img/testimonial-img-6.jpg" class="w-12 h-12 rounded-full">
+                <div>
+                    <p class="font-semibold">Henry Ochi</p>
+                    <span class="text-gray-400 text-sm">Bank Manager</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!---------------------------FOOTER------------------------------------->
+<section class="marquee-section">
+    <div class="marquee">
+        <span>
+            Start building software ✦ Start building software ✦ 
+            Start building software ✦ Start building software ✦ 
+        </span>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="footer-about">
+            <h3>✶ Azzle</h3>
+            <p>
+                Our mission is to harness the power of AI to solve complex business challenges & 
+                decision-makers with data-driven insights, and enhance user experiences across digital platforms.
+            </p>
+
+            <p class="footer-website">Website: <a href="#">www.example.com</a></p>
+        </div>
+
+        <!-- PRIMARY PAGES -->
+        <div class="footer-col">
+            <h4>Primary Pages</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- UTILITY PAGES -->
+        <div class="footer-col">
+            <h4>Utility Pages</h4>
+            <ul>
+                <li><a href="#">Signup</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">404 Not Found</a></li>
+                <li><a href="#">Password Reset</a></li>
+            </ul>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-col newsletter">
+            <h4>Subscribe To Our Newsletter</h4>
+            <div class="newsletter-box">
+                <input type="email" placeholder="Enter your email" />
+                <button class="newsletter-btn">→</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © Copyright 2023, All Rights Reserved by Mthemeus
+    </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+
+
+</html>
